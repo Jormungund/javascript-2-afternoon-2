@@ -18,6 +18,9 @@ var arr = [10,20,30];
 */
 
 //Code Here
+var first = (arr) => {
+  return arr[0];
+}
 
 
 
@@ -33,6 +36,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
+var last = (arr) => {
+  return arr[2];
+}
 
 
 
@@ -48,6 +54,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
+var looper = (family) => {
+  for (var i=0;i<family.length;i++){
+    alert(i+1);
+  }
+}
 
 
 
@@ -63,6 +74,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+var reversedLooper = (letters) => {
+  for (var i=letters.length-1;i>=0;i--){
+    alert(i +1);
+  }
+}
 
 
 
@@ -78,6 +94,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
+var evenFinder = (nums) => {
+  var array = [];
+  for(var i=0;i<nums.length;i++){
+    if(nums[i]%2 === 0){
+      array.push(nums[i]);
+    }
+  }
+  return array;
+}
 
 
 
@@ -106,6 +131,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+var divider = (numbersArray) => {
+  var seperated = [];
+  var evens = [];
+  var odds = [];
+  for(var i=0;i<numbersArray.length;i++){
+    if (numbersArray[i]%2 === 0){
+      evens.push(numbersArray[i]);
+    }else if(numbersArray[i]%2 !==0){
+      odds.push(numbersArray[i]);
+    }
+  }
+  seperated[0] = evens;
+  seperated[1] = odds;
+  return seperated;
+}
 
 
 
@@ -127,6 +167,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+var finder = (arr) =>{
+  var random = getRandomArbitrary();
+  for(var i=0; i<arr.length; i++){
+    if(random === arr[i]){
+      return true;
+    }
+  }
+  return false;
+}
 
 
 
@@ -156,6 +205,31 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+var removeItem = (myGroceryList, item) => {
+  var a = item;
+  var c = [];
+  var d = myGroceryList;
+  for(var i=0; i<d.length;i++){
+    if(a === d[i]){
+      d.splice(i,1);
+    }
+  if(myGroceryList === truthy){
+    return d;
+  }else {
+    return c;
+  }
+  }
+}
+var addItem = (myGroceryList, item) => {
+  var b = item;
+  for (var i=0; i<myGroceryList.length;i++){
+    if(a === myGroceryList[i]){
+
+    }else {
+      myGroceryList.push(b);
+    }
+  }
+}
 
 
 
