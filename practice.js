@@ -206,29 +206,19 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 var removeItem = (myGroceryList, item) => {
-  var a = item;
-  var c = [];
-  var d = myGroceryList;
-  for(var i=0; i<d.length;i++){
-    if(a === d[i]){
-      d.splice(i,1);
-    }
-  if(myGroceryList === truthy){
-    return d;
-  }else {
-    return c;
+  if(!item || !myGroceryList){
+    return [];
   }
-  }
+  item2beRemoved = myGroceryList.indexOf(item);
+  myGroceryList.splice(item2beRemoved, 1);
+  return myGroceryList;
 }
 var addItem = (myGroceryList, item) => {
-  var b = item;
-  for (var i=0; i<myGroceryList.length;i++){
-    if(a === myGroceryList[i]){
-
-    }else {
-      myGroceryList.push(b);
-    }
+  if(!item || !myGroceryList) {
+    return [];
   }
+  myGroceryList.push(item);
+  return myGroceryList;
 }
 
 
@@ -240,6 +230,13 @@ var addItem = (myGroceryList, item) => {
 */
 
 //Code Here
+var maker = () => {
+  var arr = [];
+  for(var i=0;i<215;i++){
+    arr.push(i+1);
+  }
+  return arr;
+}
 
 
 
@@ -256,6 +253,11 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+var addTen = (numbers) => {
+  var arr= [];
+  numbers.forEach(function(number){arr.push(Number(number) + 10)});
+  return arr;
+}
 
 
 
@@ -281,6 +283,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+var longer = (arr1, arr2) => {
+  if(arr1.length > arr2.length) {
+    return arr1;
+  }else {
+    return arr2;
+  }
+}
 
 
 
@@ -293,6 +302,17 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+var both = (arr1, arr2) => {
+  var bananas = [];
+  for(var i=0;i<arr1.length;i++){
+    for(var a=0; a<arr2.length;a++){
+      if (arr2[a]===arr1[i]){
+        bananas.push(arr2[a]);
+      }
+    }
+  }
+  return bananas;
+}
 
 
 
@@ -333,6 +353,11 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees[0] = tyler;
+devMountainEmployees[1] = cahlan;
+devMountainEmployees[2] = ryan;
+devMountainEmployees[3] = colt;
+console.log(devMountainEmployees.length);
 
 
 
@@ -342,7 +367,8 @@ var colt = {
 */
 
 //Code Here
-
+var removeCahlan = devMountainEmployees.indexOf(cahlan);
+devMountainEmployees.splice(removeCahlan, 1);
 
 
 ////////// PROBLEM 13 //////////
@@ -354,6 +380,7 @@ var colt = {
 */
 
 //Code Here
+var users = [];
 
 
 
@@ -373,7 +400,22 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Banana Manana',
+  email: 'bananamanana@gmail.com',
+  password: 'bananamanana',
+  username: 'BananaManana'
+}
 
+var user3 = {
+  name: 'Borbus McBorb',
+  email: 'borbus@gmail.com',
+  password: 'borbusmcborb',
+  username: 'Borb'
+}
+users[0] = user1;
+users[1] = user2;
+users[2] = user3;
 
 
 /*
@@ -387,6 +429,8 @@ var user1 = {
 */
 
 //Code Here
+var removeTyler = users.indexOf(user1);
+users.splice(removeTyler, 1);
 
 
 
